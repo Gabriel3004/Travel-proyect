@@ -1,10 +1,10 @@
-import React from "react";
-import ListQuiz from "./ListQuiz";
+import Quiz from "./Quiz";
 
 const QuizWrapper = () => {
   return (
-    <div className="quizContainer">
-      <ListQuiz />
+    <div className="quizWrapper">
+      <h1>Test your Knowledge</h1>
+      <Quiz />
     </div>
   );
 };
