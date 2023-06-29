@@ -23,7 +23,8 @@ const QuizWrapper = () => {
             score: prev.score + 10,
             correctAnswers: prev.correctAnswers + 1,
           }
-        : { ...prev, wrongAnswers: prev.wrongAnswers + 1 }
+        : { ...prev,
+          wrongAnswers: prev.wrongAnswers + 1 }
     );
   };
 
@@ -45,9 +46,9 @@ const QuizWrapper = () => {
         <h2>{question}</h2>
         <ul>
           {answers.map((answer) => (
-            <li onClick={() => onAnswerSelected(answer)} key={answer}>
+            <div className="answers"><li onClick={() => onAnswerSelected(answer)} key={answer}>
               {answer}
-            </li>
+            </li></div>
           ))}
         </ul>
         <button onClick={onClickNext}>Next</button>

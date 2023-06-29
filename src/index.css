@@ -16,7 +16,7 @@ html, body {
 
 .container {
     background-color: #606e8c;
-    width: 70vw;
+    width: 50vw;
     height: fit-content;
     min-height: 50vh;
     display: flex;
@@ -28,3 +28,24 @@ html, body {
 /* .title {
 
 } */
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+ul li {
+
+}
+
+.answers {
+    border: 2px solid white;
+    padding: 10px 70px 10px 70px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    background-color: white;
+    color: #181818;
+    font-weight: 600;
+}
