@@ -2,7 +2,7 @@ export const Answers = ({ answers }) => {
   return (
     <div className="answerContainer">
       {answers.map((answer) => {
-        return (
+        return ( 
           <div key={answer.id}>
             <button>{answer}</button>
           </div>

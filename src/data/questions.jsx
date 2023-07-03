@@ -1,5 +1,5 @@
 export const questions = [
-  {
+  {  
     id: "26c4806d-fe05-4344-84ca-3c0092d15477",
     question: "What does CPU stand for?",
     correctAnswer: "Central Processing Unit",
