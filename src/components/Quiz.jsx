@@ -1,8 +1,10 @@
 import { questions } from "../data/questions";
 import { Answers } from "./Answers";
 
+
 const Quiz = () => {
   return (
+    <>
     <div className="quizContainer">
       {questions.map((question) => {
         return (
@@ -15,7 +17,8 @@ const Quiz = () => {
         );
       })}
     </div>
-    
+    <button className="bton">ShowResult</button>
+    </>
   );
 };
 

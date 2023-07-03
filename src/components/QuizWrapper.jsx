@@ -1,6 +1,5 @@
 import Quiz from "./Quiz";
 
-
 const QuizWrapper = () => {
   return (
     <div className="quizWrapper">
@@ -9,7 +8,5 @@ const QuizWrapper = () => {
     </div>
   );
 };
-
-
 
 export default QuizWrapper;

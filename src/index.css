@@ -71,13 +71,15 @@ button:hover {
   color: var(--mainBlack);
 }
 
-.bton button{
+.bton{
   background-color: rgb(76, 227, 76);
   border-radius: 10%;
   width: 110px; 
+  margin: 30px;
+  
 }
 
-.bton button:hover{
+.bton:hover{
   background-color: rgb(64, 107, 64);
   color: #c5c5c5;
   border-radius: 10%;
