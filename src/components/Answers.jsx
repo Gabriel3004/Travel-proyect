@@ -1,12 +1,17 @@
-import { useState } from "react";
-
-const Answers = ({ answers }) => {
-  const [userAnswer, setUserAnswer] = useState("");
-  const [answerGiven, setAnswerGiven] = useState(false);
-
+const Answers = ({
+  answers,
+  setAllAnswers,
+  allAnswers,
+  setAnswerGiven,
+  id,
+}) => {
   const handleClick = (event) => {
-    setUserAnswer(event.target.name);
-    setAnswerGiven(true);
+    setAnswerGiven((prev) => {
+      return { ...prev, [id]: true };
+    });
+    setAllAnswers((prev) => {
+      return { ...prev, [id]: event.target.name };
+    });
   };
 
   return (
@@ -18,9 +23,7 @@ const Answers = ({ answers }) => {
               onClick={handleClick}
               style={{
                 backgroundColor:
-                  answerGiven == true && userAnswer === answer
-                    ? "rgb(228, 194, 107)"
-                    : "",
+                  allAnswers[id] === answer ? "rgb(228, 194, 107)" : "",
               }}
               className="answerButton"
               name={answer}

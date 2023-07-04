@@ -5,12 +5,8 @@ import { Result } from "./Result";
 import { useState } from "react";
 
 const Quiz = () => {
-  // const [showResult, setShowResult] = useState();
-
-  // const handleClick = () => {
-  //   setShowResult(true);
-  //   console.log(showResult);
-  // };
+  const [allAnswers, setAllAnswers] = useState({});
+  const [answerGiven, setAnswerGiven] = useState({});
 
   return (
     <>
@@ -20,15 +16,25 @@ const Quiz = () => {
             <div key={question.id}>
               <h2>{question.question}</h2>
               <Answers
+                setAllAnswers={setAllAnswers}
+                allAnswers={allAnswers}
+                setAnswerGiven={setAnswerGiven}
+                answerGiven={answerGiven}
                 answers={question.answers}
                 correctAnswer={question.correctAnswer}
                 key={question.question}
+                id={question.id}
               />
             </div>
           );
         })}
       </div>
-      <Result />
+      <Result
+        questions={questions}
+        allAnswers={allAnswers}
+        setAllAnswers={setAllAnswers}
+        setAnswerGiven={setAnswerGiven}
+      />
     </>
   );
 };

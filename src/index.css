@@ -83,8 +83,38 @@ button {
 #popupWindow {
   border: solid 1px;
   background-color: white;
+  width: 40rem;
 }
 
 #resultOverview {
   color: black;
+}
+
+#resultOverview h2 {
+  margin-bottom: 1.5rem;
+}
+
+.resultListing h3,
+.resultListing p {
+  text-align: center;
+}
+
+.resultListing {
+  margin-bottom: 1rem;
+}
+
+.rightAnswer {
+  color: rgb(4, 74, 4);
+  font-weight: bold;
+}
+
+.wrongAnswer {
+  color: rgb(177, 18, 18);
+  font-weight: bold;
+}
+
+#restartContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
