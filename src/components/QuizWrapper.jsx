@@ -34,7 +34,7 @@ const QuizWrapper = () => {
     }
   };
 
-  const onAnswerSelected = (answer, index) => {
+  const answerSelected = (answer, index) => {
     setIdx(index);
     if (answer === correctAnswer) {
       setSelectedAnswer(true);
@@ -54,7 +54,7 @@ const QuizWrapper = () => {
             <ul>
               {answers.map((answer, index) => (
                 <li
-                  onClick={() => onAnswerSelected(answer, index)}
+                  onClick={() => answerSelected(answer, index)}
                   key={answer}
                   className={idx === index ? "selected" : null}
                 >

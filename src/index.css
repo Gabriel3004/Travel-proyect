@@ -65,7 +65,7 @@ html, body {
     text-decoration: none;
     list-style: none;
     font-size: 16px;
-    background: #a9aca7;
+    background: #8ec6dd;
     border: 1px solid #eaeaea;
     border-radius: 16px;
     padding: 10px 0 10px 20px;
@@ -90,7 +90,7 @@ html, body {
 
   .container button {
     background: rgb(94, 214, 164);
-    border-radius: 9px;
+    border-radius: 16px;
     font-size: 18px;
     color: #000;
     padding: 10px 42px;
@@ -100,9 +100,9 @@ html, body {
   }
   
   .container button:disabled {
-    background: #e7e8e9;
-    color: #9fa3a9;
+    background: #8ec6dd;
     cursor: not-allowed;
+    border-color: #fff;
   }
   
   .flex-right {
