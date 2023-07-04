@@ -2,12 +2,11 @@ import { useState } from "react";
 
 const Answers = ({ answers }) => {
   const [userAnswer, setUserAnswer] = useState("");
+  const [answerGiven, setAnswerGiven] = useState(false);
 
   const handleClick = (event) => {
-    setUserAnswer((prev) => ({
-      ...prev,
-      userAnswer: event.target.value,
-    }));
+    setUserAnswer(event.target.name);
+    setAnswerGiven(true);
   };
 
   return (
@@ -17,6 +16,12 @@ const Answers = ({ answers }) => {
           return (
             <button
               onClick={handleClick}
+              style={{
+                backgroundColor:
+                  answerGiven == true && userAnswer === answer
+                    ? "rgb(228, 194, 107)"
+                    : "",
+              }}
               className="answerButton"
               name={answer}
               key={answer}

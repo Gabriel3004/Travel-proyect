@@ -1,7 +1,11 @@
 import questions from "../data/questions";
 import Answers from "./Answers";
+import Result from "./Result";
+
+import { useState } from "react";
 
 const Quiz = () => {
+  const [showResult, setShowResult] = useState(false);
   return (
     <>
       <div className="quizContainer">
