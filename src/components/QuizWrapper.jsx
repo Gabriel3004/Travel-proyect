@@ -6,7 +6,7 @@ const QuizWrapper = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState("");
   const [showResult, setShowResult] = useState(false);
-  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+  const [idx, setIdx] = useState(null);
   const [result, setResult] = useState({
     correctAnswers: 0,
     wrongAnswers: 0,
@@ -14,9 +14,10 @@ const QuizWrapper = () => {
 
   const { questions } = Questions;
   const { question, answers, correctAnswer } = questions[currentQuestion];
+  const addZero = (number) => (number > 9 ? number : `0${number}`);
 
   const onClickNext = () => {
-    setSelectedAnswerIndex(null);
+    setIdx(null);
     setResult((prev) =>
       selectedAnswer
         ? {
@@ -34,7 +35,7 @@ const QuizWrapper = () => {
   };
 
   const onAnswerSelected = (answer, index) => {
-    setSelectedAnswerIndex(index);
+    setIdx(index);
     if (answer === correctAnswer) {
       setSelectedAnswer(true);
     } else {
@@ -42,57 +43,55 @@ const QuizWrapper = () => {
     }
   };
 
-  const addLeadingZero = (number) => (number > 9 ? number : `0${number}`);
-
   return (
     <div className="wrapper">
-      <div className="container">
-        {!showResult ? (
-          <div>
-            <div></div>
+      {!showResult ? (
+        <div className="container">
+          <div className="ques">
             <h2>{question}</h2>
+          </div>
+          <div className="answ">
             <ul>
               {answers.map((answer, index) => (
                 <li
                   onClick={() => onAnswerSelected(answer, index)}
                   key={answer}
-                  className={
-                    selectedAnswerIndex === index ? "selected-answer" : null
-                  }
+                  className={idx === index ? "selected" : null}
                 >
                   {answer}
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="nbutt">
             <div className="flex">
-              <div>
-                <span className="active-question-no">
-                  {addLeadingZero(currentQuestion + 1)}
-                </span>
-                <span className="total-question">
-                  /{addLeadingZero(questions.length)}
-                </span>
-              </div>
               <div className="flex-right">
-                <button
-                  onClick={onClickNext}
-                  disabled={selectedAnswerIndex === null}
-                >
-                  {currentQuestion === questions.length - 1 ? "Finish" : "Next"}
+                <button onClick={onClickNext} disabled={idx === null}>
+                  {currentQuestion === questions.length - 1 ? "Send" : "Next"}
                 </button>
               </div>
+              <div>
+                <span className="notactive">
+                  {addZero(currentQuestion + 1)}
+                </span>
+                <span className="total">
+                  /{addZero(questions.length)}
+                </span>
+              </div>
             </div>
           </div>
-        ) : (
-          <div className="result">
-            <h3>Your result:</h3>
-            <div>
+        </div>
+      ) : (
+        <div className="result">
+          <h3>Your result:</h3>
+          <div>
+            <p>
               You answered {result.correctAnswers}/{questions.length} questions
-              correctly
-            </div>
+              correctly!!! 🎉
+            </p>
           </div>
-        )}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -14,56 +14,37 @@ html, body {
     align-items: center;
 }
 
-.container {
-    background-color: #606e8c;
-    width: 50vw;
-    height: fit-content;
-    min-height: 50vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* .title {
-
-} */
-
-ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-}
-
-.container ul .selected-answer {
+.container ul .selected {
     text-decoration: none;
     list-style: none;
-    color: #2d264b;
     font-size: 16px;
-    background: grey;
+    background: rgb(94, 214, 164);
     border: 1px solid #eaeaea;
     border-radius: 16px;
-    padding: 10px 70px 10px 70px;
+    padding: 15px 5px 15px 25px;
     margin-top: 15px;
     cursor: pointer;
+    font-weight: bold;
   }
 
   .container {
-    max-width: 500px;
-    min-width: 250px;
+    width: 35vw;
+    min-height: 420px;
+    height: auto;
     background: #ffffff;
     border-radius: 4px;
-    margin-top: 100px;
     padding: 30px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
-  .container .active-question-no {
+  .container .notactive {
     font-size: 32px;
     font-weight: 500;
   }
   
-  .container .total-question {
+  .container .total {
     font-size: 16px;
     font-weight: 500;
     color: #e0dee3;
@@ -83,19 +64,32 @@ ul {
   .container ul li {
     text-decoration: none;
     list-style: none;
-    color: #2d264b;
     font-size: 16px;
-    background: #ffffff;
+    background: #a9aca7;
     border: 1px solid #eaeaea;
     border-radius: 16px;
-    padding: 10px 70px 10px 70px;
+    padding: 10px 0 10px 20px;
     margin-top: 15px;
     cursor: pointer;
+    width: 50%;
   }
   
-  
+  .ques {
+    height: 75px;
+    display: flex;
+    align-items: center;
+  }
+
+  .answ {
+    height: 54%;
+  }
+
+  .nbutt{
+    height: 24%;
+  }
+
   .container button {
-    background: white;
+    background: rgb(94, 214, 164);
     border-radius: 9px;
     font-size: 18px;
     color: #000;
@@ -103,7 +97,6 @@ ul {
     outline: none;
     border: 1px solid #eaeaea;
     cursor: pointer;
-    margin-top: 15px;
   }
   
   .container button:disabled {
@@ -114,17 +107,18 @@ ul {
   
   .flex-right {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
   }
   
   .result h3 {
-    font-size: 24px;
+    font-size: 32px;
     letter-spacing: 1.4px;
     text-align: center;
   }
   
   .result p {
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
   }
   
@@ -136,5 +130,18 @@ ul {
   .flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .result {
+    width: 30vw;
+    min-height: 280px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 25px;
+    padding: 30px 60px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     align-items: center;
   }
