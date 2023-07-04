@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { questions } from "../data/questions";
 import { Answers } from "./Answers";
 
@@ -6,7 +7,7 @@ const Quiz = () => {
   return (
     <>
     <div className="quizContainer">
-      {questions.map((question) => {
+      {questions.map((question, index) => {
         return (
           <>
             <div key={question.id}>
