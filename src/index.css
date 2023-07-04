@@ -50,12 +50,14 @@ h1 {
 h2 {
   margin-top: 2rem;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .answerContainer {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  justify-content: center;
 }
 
 button {
