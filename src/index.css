@@ -36,16 +36,105 @@ ul {
     justify-content: flex-start;
 }
 
-ul li {
-
-}
-
-.answers {
-    border: 2px solid white;
+.container ul .selected-answer {
+    text-decoration: none;
+    list-style: none;
+    color: #2d264b;
+    font-size: 16px;
+    background: grey;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
     padding: 10px 70px 10px 70px;
-    border-radius: 10px;
-    margin-bottom: 5px;
-    background-color: white;
-    color: #181818;
-    font-weight: 600;
-}
+    margin-top: 15px;
+    cursor: pointer;
+  }
+
+  .container {
+    max-width: 500px;
+    min-width: 250px;
+    background: #ffffff;
+    border-radius: 4px;
+    margin-top: 100px;
+    padding: 30px 60px;
+  }
+  
+  .container .active-question-no {
+    font-size: 32px;
+    font-weight: 500;
+  }
+  
+  .container .total-question {
+    font-size: 16px;
+    font-weight: 500;
+    color: #e0dee3;
+  }
+  
+  .container h2 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .container ul {
+    margin-top: 20px;
+    margin-left: -40px;
+  }
+  
+  .container ul li {
+    text-decoration: none;
+    list-style: none;
+    color: #2d264b;
+    font-size: 16px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 10px 70px 10px 70px;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  
+  
+  .container button {
+    background: white;
+    border-radius: 9px;
+    font-size: 18px;
+    color: #000;
+    padding: 10px 42px;
+    outline: none;
+    border: 1px solid #eaeaea;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .container button:disabled {
+    background: #e7e8e9;
+    color: #9fa3a9;
+    cursor: not-allowed;
+  }
+  
+  .flex-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .result h3 {
+    font-size: 24px;
+    letter-spacing: 1.4px;
+    text-align: center;
+  }
+  
+  .result p {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .result p span {
+    color: #000;
+    font-size: 22px;
+  }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
