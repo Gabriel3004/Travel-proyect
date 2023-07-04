@@ -79,3 +79,12 @@ button {
   background-color: darkgoldenrod;
   font-weight: bold;
 }
+
+#popupWindow {
+  border: solid 1px;
+  background-color: white;
+}
+
+#resultOverview {
+  color: black;
+}

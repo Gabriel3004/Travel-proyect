@@ -5,12 +5,12 @@ import { Result } from "./Result";
 import { useState } from "react";
 
 const Quiz = () => {
-  const [showResult, setShowResult] = useState();
+  // const [showResult, setShowResult] = useState();
 
-  const handleClick = () => {
-    setShowResult(true);
-    console.log(showResult);
-  };
+  // const handleClick = () => {
+  //   setShowResult(true);
+  //   console.log(showResult);
+  // };
 
   return (
     <>
@@ -28,10 +28,7 @@ const Quiz = () => {
           );
         })}
       </div>
-      <button id="resultButton" onClick={handleClick}>
-        show result
-      </button>
-      {/* <Result disabled={showResult ? true : false} /> */}
+      <Result />
     </>
   );
 };
