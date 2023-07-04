@@ -11,7 +11,7 @@
 :root {
   --bodyColor: #212a3e;
   --buttonColor: #394867;
-  --selectColor: #c5c5c5;
+  --selectColor: rgb(228, 194, 107);
   --mainWhite: #fff;
   --mainBlack: #000000;
 }
@@ -33,7 +33,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
 }
 
 h1 {
@@ -45,6 +44,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 90vw;
 }
 
 h2 {
@@ -55,6 +55,7 @@ h2 {
 .answerContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 button {
@@ -66,7 +67,13 @@ button {
   color: var(--mainWhite);
 }
 
-button:hover {
+.answerButton:hover {
   background-color: var(--selectColor);
   color: var(--mainBlack);
+}
+
+#resultButton {
+  margin: 2rem;
+  background-color: darkgoldenrod;
+  font-weight: bold;
 }
